@@ -1,0 +1,57 @@
+{
+    "name": "tsx-code-coverage-bug",
+    "version": "1.0.0",
+    "description": "",
+    "keywords": [],
+    "homepage": "https://github.com/electrovir/tsx-code-coverage-bug",
+    "bugs": {
+        "url": "https://github.com/electrovir/tsx-code-coverage-bug/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/electrovir/tsx-code-coverage-bug"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "electrovir",
+        "url": "https://github.com/electrovir"
+    },
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "virmator frontend build",
+        "compile": "rm -rf dist && virmator compile",
+        "docs:update": "virmator code-in-markdown",
+        "format": "virmator format",
+        "prepublishOnly": "npm run compile && npm run test:all",
+        "preview": "virmator frontend preview",
+        "spellcheck": "virmator spellcheck",
+        "start": "npm install && virmator frontend",
+        "test": "virmator test",
+        "test:all": "npm run test:types && npm test && npm run spellcheck && npm run test:format && npm run test:docs",
+        "test:docs": "virmator code-in-markdown check",
+        "test:format": "virmator format check",
+        "test:types": "tsc --noEmit",
+        "test:web": "virmator test-web"
+    },
+    "devDependencies": {
+        "@istanbuljs/nyc-config-typescript": "^1.0.2",
+        "@types/chai": "^4.3.4",
+        "@types/mocha": "^10.0.0",
+        "chai": "^4.3.7",
+        "istanbul-smart-text-reporter": "^1.0.0",
+        "mocha": "^10.1.0",
+        "mocha-spec-reporter-with-file-names": "^0.0.2",
+        "nyc": "^15.1.0",
+        "prettier": "^2.8.0",
+        "prettier-plugin-jsdoc": "^0.4.2",
+        "prettier-plugin-multiline-arrays": "^1.1.1",
+        "prettier-plugin-organize-imports": "^3.2.0",
+        "prettier-plugin-packagejson": "^2.3.0",
+        "prettier-plugin-sort-json": "^0.0.3",
+        "prettier-plugin-toml": "^0.3.1",
+        "ts-node": "^10.9.1",
+        "tsx": "^3.12.1",
+        "virmator": "^4.3.4"
+    }
+}
