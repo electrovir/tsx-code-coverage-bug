@@ -1,8 +1,7 @@
 {
     "name": "tsx-code-coverage-bug",
-    "version": "1.0.0",
-    "description": "",
-    "keywords": [],
+    "version": "0.0.0",
+    "private": true,
     "homepage": "https://github.com/electrovir/tsx-code-coverage-bug",
     "bugs": {
         "url": "https://github.com/electrovir/tsx-code-coverage-bug/issues"
@@ -16,8 +15,6 @@
         "name": "electrovir",
         "url": "https://github.com/electrovir"
     },
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
     "scripts": {
         "start": "npm i && npm test",
         "test": "nyc --nycrc-path 'configs/nyc.config.js' mocha --config 'configs/mocha.config.js'"
@@ -27,9 +24,7 @@
         "@types/chai": "^4.3.4",
         "@types/mocha": "^10.0.0",
         "chai": "^4.3.7",
-        "istanbul-smart-text-reporter": "^1.0.0",
         "mocha": "^10.1.0",
-        "mocha-spec-reporter-with-file-names": "^0.0.2",
         "nyc": "^15.1.0",
         "tsx": "^3.12.1"
     }
