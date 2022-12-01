@@ -1,0 +1,1 @@
+# tsx-code-coverage-bug
