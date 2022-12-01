@@ -2,6 +2,7 @@ const percent = 100;
 
 const nycConfig = {
   extends: '@istanbuljs/nyc-config-typescript',
+  checkCoverage: true,
 
   branches: percent,
   functions: percent,
